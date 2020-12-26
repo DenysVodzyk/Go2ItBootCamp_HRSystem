@@ -14,11 +14,12 @@ public class Department {
         this.departmentName = departmentName;
     }
 
-    public void addEmployee(Employee employee) throws EntryAlreadyExistException {
-        if (employees.contains(employee)) {
-            throw new EntryAlreadyExistException("Employee is already part of the " + this.departmentName + " department.");
-        }
+    public void addEmployee(Employee employee) {
         employees.add(employee);
+    }
+
+    public void removeEmployee(Employee employee) {
+        employees.remove(employee);
     }
 
     @Override
