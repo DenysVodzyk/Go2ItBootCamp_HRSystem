@@ -11,19 +11,28 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(Department department, String name, LocalDate dob, double salary) {
+    public Employee(Department department, String name, LocalDate dob, String roleDescription, double salary) {
         this.department = department;
         this.name = name;
         this.dob = dob;
         this.salary = salary;
+        this.roleDescription = roleDescription;
     }
 
     public boolean isStatus() {
         return status;
     }
 
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
     public Department getDepartment() {
         return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
     }
 
     public String getName() {
@@ -54,4 +63,12 @@ public class Employee {
         return salary;
     }
 
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    @Override
+    public String toString() {
+        return getName();
+    }
 }
