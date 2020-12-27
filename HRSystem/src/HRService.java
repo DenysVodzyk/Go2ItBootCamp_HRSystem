@@ -4,11 +4,15 @@ public class HRService {
     }
 
     public String fireEmployee(Employee employee) {
+        leaveCompany(employee);
+        return employee.getName() + ", you are fired. Here is your $" + employee.getSalary() * 0.4 +
+                ", which is 40% of your annual salary.";
+    }
+
+    public void leaveCompany(Employee employee){
         employee.setStatus(false);
         employee.getDepartment().removeEmployee(employee);
         Department.addEmployeeToDatabase(employee);
-        return employee.getName() + ", you are fired. Here is your $" + employee.getSalary() * 0.4 +
-                ", which is 40% of your annual salary.";
     }
 
 
