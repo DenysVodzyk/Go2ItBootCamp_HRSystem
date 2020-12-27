@@ -70,7 +70,8 @@ public class Employee {
     }
 
     public void setSalary(double salary) {
-        this.salary = salary;
+        String salaryRounded = String.format("%.2f", salary);
+        this.salary = Double.valueOf(salaryRounded);
     }
 
     public int getYearsOfExperience() {
