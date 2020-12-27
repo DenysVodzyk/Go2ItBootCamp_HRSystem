@@ -26,16 +26,17 @@ public class Department {
         addEmployeeToDatabase(employee);
     }
 
+    //a list of all employees that ever worked in the company, active or inactive
     public static void addEmployeeToDatabase(Employee employee) {
         allEmployeesDatabase.put(employee.getName(), employee.isStatus());
     }
 
-    //quantity of employees in the company
+    //quantity of employees in the company database (active and inactive)
     public static int numberOfEmployeesInDatabase() {
         return allEmployeesDatabase.size();
     }
 
-    //returning all employees in the company, just names
+    //returning all employees in the company, just names (active and inactive)
     public static Set<String> allEmployeesNamesInDatabase() {
         return allEmployeesDatabase.keySet();
     }
