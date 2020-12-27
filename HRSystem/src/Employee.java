@@ -81,6 +81,14 @@ public class Employee {
         this.yearsOfExperience = yearsOfExperience;
     }
 
+    public void addAnnualReviewToDatabase(AnnualReview annualReview) {
+        annualReviewDatabase.add(annualReview);
+    }
+
+    public Set<AnnualReview> getAnnualReviewDatabase() {
+        return annualReviewDatabase;
+    }
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -90,6 +98,7 @@ public class Employee {
                 ", dob=" + dob +
                 ", roleDescription='" + roleDescription + '\'' +
                 ", salary=" + salary +
+                ", yearsOfExperience=" + yearsOfExperience +
                 '}';
     }
 }
