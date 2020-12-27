@@ -11,8 +11,8 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(Department department, String name, LocalDate dob, String roleDescription, double salary) {
-        this.department = department;
+    public Employee(String name, LocalDate dob, String roleDescription, double salary) {
+        this.department = null;
         this.name = name;
         this.dob = dob;
         this.salary = salary;
@@ -69,6 +69,13 @@ public class Employee {
 
     @Override
     public String toString() {
-        return getName();
+        return "Employee{" +
+                "status=" + status +
+                ", department=" + department.getDepartmentName() +
+                ", name='" + name + '\'' +
+                ", dob=" + dob +
+                ", roleDescription='" + roleDescription + '\'' +
+                ", salary=" + salary +
+                '}';
     }
 }
