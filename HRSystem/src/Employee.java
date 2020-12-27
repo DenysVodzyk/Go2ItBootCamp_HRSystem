@@ -1,4 +1,6 @@
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Employee {
     private boolean status = true;
@@ -7,16 +9,20 @@ public class Employee {
     private LocalDate dob;
     private String roleDescription;
     private double salary;
+    private int yearsOfExperience;
+    private Set<AnnualReview> annualReviewDatabase;
 
     public Employee() {
     }
 
-    public Employee(String name, LocalDate dob, String roleDescription, double salary) {
+    public Employee(String name, LocalDate dob, String roleDescription, double salary, int yearsOfExperience) {
         this.department = null;
         this.name = name;
         this.dob = dob;
         this.salary = salary;
         this.roleDescription = roleDescription;
+        this.yearsOfExperience = yearsOfExperience;
+        this.annualReviewDatabase = new HashSet<>();
     }
 
     public boolean isStatus() {
@@ -65,6 +71,14 @@ public class Employee {
 
     public void setSalary(double salary) {
         this.salary = salary;
+    }
+
+    public int getYearsOfExperience() {
+        return yearsOfExperience;
+    }
+
+    public void setYearsOfExperience(int yearsOfExperience) {
+        this.yearsOfExperience = yearsOfExperience;
     }
 
     @Override
