@@ -61,7 +61,7 @@ public class Main {
         //Add 2019 annual review for Employee Four to the database of reviews and increase salary based on result of the annual review.
         four.addAnnualReviewToDatabase(annualReviewEmployeeFour2019);
         hrService.increaseSalary(four, annualReviewEmployeeFour2019.getSalaryIncreaseInPercent());
-        
+
         hrService.printAnnualReviewHistory(two);
         System.out.println();
         System.out.println(two);
@@ -71,7 +71,7 @@ public class Main {
 
     //Help method for functionality check
     public static void printDepartmentsContent(Department department1, Department department2) {
-        System.out.println("Database of employees in the company (active and inactive): " + Department.allEmployeesNamesInDatabase());
+        System.out.println("Database of employees in the company (active and inactive): " + EmployeesDatabase.allEmployeesNamesInDatabase());
         System.out.println(department1.getDepartmentName() + ":");
         System.out.println(department1);
         System.out.println(department2.getDepartmentName() + ":");
@@ -81,9 +81,9 @@ public class Main {
 
     public static void printAllEmployeesStatus() {
         System.out.println("Print all ACTIVE employees: ");
-        Department.printActiveEmployees();
+        EmployeesDatabase.printActiveEmployees();
         System.out.println("Print all INACTIVE employees: ");
-        Department.printInactiveEmployees();
+        EmployeesDatabase.printInactiveEmployees();
         System.out.println();
     }
 }
