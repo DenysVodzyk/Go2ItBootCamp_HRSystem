@@ -3,7 +3,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Employee {
-    private boolean status = true;
+    private boolean isStatus = true;
     private Department department;
     private String name;
     private LocalDate dob;
@@ -26,11 +26,11 @@ public class Employee {
     }
 
     public boolean isStatus() {
-        return status;
+        return isStatus;
     }
 
     public void setStatus(boolean status) {
-        this.status = status;
+        this.isStatus = status;
     }
 
     public Department getDepartment() {
@@ -93,7 +93,7 @@ public class Employee {
     @Override
     public String toString() {
         return "Employee{" +
-                "status=" + status +
+                "status=" + isStatus +
                 ", department=" + department.getDepartmentName() +
                 ", name='" + name + '\'' +
                 ", dob=" + dob +
