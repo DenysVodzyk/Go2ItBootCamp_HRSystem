@@ -14,7 +14,7 @@ public class HRService {
     public void leaveCompany(Employee employee) {
         employee.setStatus(false);
         employee.getDepartment().removeEmployee(employee);
-        Department.addEmployeeToDatabase(employee);
+        EmployeesDatabase.addEmployeeToDatabase(employee);
     }
 
     //moving from one department to another with a new role description
