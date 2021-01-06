@@ -21,19 +21,22 @@ public class Main {
             salesDepartment.addEmployee(three);
             salesDepartment.addEmployee(four);
             salesDepartment.addEmployee(one);
-        } catch (EntryAlreadyExistException e) {
+        } catch (DuplicateEmployeeException e) {
             e.printStackTrace();
         }
 
         printDepartmentsContent(engineeringDepartment, salesDepartment);
         printAllEmployeesStatus();
 
+        System.out.println("11111");
+        engineeringDepartment.getEmployees();
+
         //increase salary to employee One by 10%, transfer employee Two from Engineering dept to Sale dept, fire employee Three
         hrService.increaseSalary(one, 10);
         hrService.fireEmployee(three);
         try {
             hrService.changeDepartment(two, salesDepartment, "sales2");
-        } catch (EntryAlreadyExistException e) {
+        } catch (DuplicateEmployeeException e) {
             e.printStackTrace();
         }
 
