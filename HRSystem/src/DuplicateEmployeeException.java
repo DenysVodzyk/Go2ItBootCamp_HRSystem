@@ -1,5 +1,5 @@
-public class EntryAlreadyExistException extends Exception {
-    public EntryAlreadyExistException(String message) {
+public class DuplicateEmployeeException extends Exception {
+    public DuplicateEmployeeException(String message) {
         super(message);
     }
 }
