@@ -16,9 +16,9 @@ public class Department {
     }
 
     //add employee to department, throw exception in case if department is already assigned to employee.
-    public void addEmployee(Employee employee) throws EntryAlreadyExistException {
+    public void addEmployee(Employee employee) throws DuplicateEmployeeException {
         if (employee.getDepartment() != null) {
-            throw new EntryAlreadyExistException("Employee " + employee.getName() + " is already a part of " + employee.getDepartment().getDepartmentName() + " department.");
+            throw new DuplicateEmployeeException("Employee " + employee.getName() + " is already a part of " + employee.getDepartment().getDepartmentName() + " department.");
         }
         employee.setDepartment(Department.this);
         employees.add(employee);
@@ -31,7 +31,7 @@ public class Department {
     }
 
     //print names of employees that are in the department
-    public void printDepartmentEmployees() {
+    public void getEmployees() {
         for (Employee employee : employees) {
             System.out.print(employee.getName() + " ");
         }
