@@ -18,7 +18,7 @@ public class HRService {
     }
 
     //moving from one department to another with a new role description
-    public void changeDepartment(Employee employee, Department newDepartment, String newRoleDescription) throws EntryAlreadyExistException {
+    public void changeDepartment(Employee employee, Department newDepartment, String newRoleDescription) throws DuplicateEmployeeException {
         employee.getDepartment().removeEmployee(employee);
         employee.setDepartment(null);
         newDepartment.addEmployee(employee);
